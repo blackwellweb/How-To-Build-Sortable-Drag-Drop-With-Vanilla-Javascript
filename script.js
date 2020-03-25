@@ -31,14 +31,15 @@ draggables.forEach(draggable => {
 containers.forEach(container => {
     container.addEventListener('dragover', e => {
 
+
         // Endable dropping as its disabled by default (our cursor by deafult will have the do not allow symbol)
         // So remove it from our event object
         e.preventDefault();
 
+
         // Pass in our current container into afterElement
         const afterElement = getDragAfterElement(container, e.clientY);
 
-        //console.log(afterElement);
 
         // Get the current element thats currently being dragged
         const draggable = document.querySelector('.dragging');
